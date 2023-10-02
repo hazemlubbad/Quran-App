@@ -13,55 +13,21 @@ class PreBuildPages extends StatefulWidget {
 
 class _PreBuildPagesState extends State<PreBuildPages> {
   int pageNumber = 1;
-  // List<Sura> suras = [];
   bool isPined = false;
   List<Widget> qPages = [];
-
-  // void getData() {
-  //   // suras = widget.pages[0].suras;
-  // }
 
   int getPreviousIndex() => pageNumber - 1;
 
   @override
   void initState() {
-    // qPages = [
-    //   QPageScreen(
-    //     pageNumber: 1,
-    //     page: widget.pages[0].suras,
-    //     // scale: scale,
-    //   ),
-    //   QPageScreen(
-    //     pageNumber: 2,
-    //     page: widget.pages[1].suras,
-    //     // scale: scale,
-    //   ),
-    //   QPageScreen(
-    //     pageNumber: 3,
-    //     page: widget.pages[2].suras,
-    //     // scale: scale,
-    //   ),
-    // ];
-    // getData();
     super.initState();
   }
-
-  // double scale = 1.0;
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        // appBar: HomeAppBar(
-        //   onTap: () {
-        //     setState(() {
-        //       isPined = !isPined;
-        //     });
-        //   },
-        //   isPined: isPined,
-        //   onSubmitted: (TextEditingController value) {},
-        // ),
         body: GestureDetector(
           // onScaleUpdate: (d) {
           //   setState(() {

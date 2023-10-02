@@ -10,6 +10,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title = 'القرءان الكريم',
     required this.pageLength,
   }) : super(key: key);
+
   final String title;
   final int pageLength;
 

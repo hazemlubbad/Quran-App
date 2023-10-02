@@ -1,12 +1,12 @@
 import '../models/bookmark.dart';
 
-Bookmark? getBookMark(List<Bookmark>bookmarks,int by){
+Bookmark? getBookMark(List<Bookmark> bookmarks, int by) {
   Bookmark? b;
-  bookmarks.forEach((element) {
-    if(element.id==by){
-      b= element;
+  for (var element in bookmarks) {
+    if (element.id == by) {
+      b = element;
     }
-  });
+  }
   return b;
 }
 

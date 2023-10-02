@@ -18,7 +18,6 @@ class QPageScreen extends StatefulWidget {
     this.bookmark,
     this.isPartScreen = false,
     required this.index,
-    // required this.scale,
   });
 
   final ConnectivityResult? connectivityResult;
@@ -27,8 +26,6 @@ class QPageScreen extends StatefulWidget {
   final List<Sura> page;
   final Bookmark? bookmark;
   final bool isPartScreen;
-
-  // final double scale;
 
   @override
   State<QPageScreen> createState() => _QPageScreenState();

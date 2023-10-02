@@ -5,7 +5,6 @@ import 'package:quran_app/models/bookmark.dart';
 import 'package:quran_app/servises/page/page_brain.dart';
 import 'package:quran_app/servises/provider.dart';
 
-
 class PageProvider extends ChangeNotifier {
   PageBrain pageBrain = PageBrain();
   void init(BuildContext context) {
@@ -36,11 +35,11 @@ class PageProvider extends ChangeNotifier {
 
   Bookmark? getBookMark(List<Bookmark> bookmarks, int by) {
     Bookmark? b;
-    bookmarks.forEach((element) {
+    for (var element in bookmarks) {
       if (element.id == by) {
         b = element;
       }
-    });
+    }
     return b;
   }
 

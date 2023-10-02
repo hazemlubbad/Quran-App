@@ -39,9 +39,6 @@ class LoadingScreenState extends State<LoadingScreen> {
 
     if (mounted) {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        // return MyHomePage(
-        //   page: page,
-        // );
         return PreBuildPages(pages: pages);
       }));
     }
@@ -61,9 +58,6 @@ class LoadingScreenState extends State<LoadingScreen> {
 
     if (mounted) {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        // return MyHomePage(
-        //   page: page,
-        // );
         return ChangeNotifierProvider(
           create: (BuildContext context) => PageProvider()..init(context),
           child: AllPagesScreen(
@@ -83,8 +77,6 @@ class LoadingScreenState extends State<LoadingScreen> {
         progress = event;
       });
     });
-    // getFirstPage();
-    // getThreePage();
     super.initState();
   }
 

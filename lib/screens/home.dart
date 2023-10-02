@@ -49,14 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   pageNumber--;
                 }
                 await widget.page.getByPage(pageNumber);
-                // getData();
                 setState(() {});
               },
               itemBuilder: (context, index) {
                 return QPageScreen(
                   pageNumber: pageNumber,
                   page: widget.page.suras, index: index,
-                  // scale: scale,
                 );
               },
             ),

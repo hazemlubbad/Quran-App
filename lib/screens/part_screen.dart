@@ -17,6 +17,7 @@ class PartScreen extends StatefulWidget {
       this.connectivityResult,
       required this.partNo})
       : super(key: key);
+
   final List<QPage> pages;
   final String partName;
   final int partNo;
@@ -35,8 +36,6 @@ class _PartScreenState extends State<PartScreen> {
   void initState() {
     super.initState();
     controller = PageController();
-
-    // controller.addListener(_onPageChanged);
   }
 
   @override
@@ -46,15 +45,6 @@ class _PartScreenState extends State<PartScreen> {
   }
 
   double progress = 0;
-
-  // int _currentPage = 0;
-  // void _onPageChanged() {
-  //   setState(() {
-  //     if (controller.positions.isNotEmpty) {
-  //       _currentPage = controller.page?.round() ?? 0;
-  //     }
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -70,16 +60,8 @@ class _PartScreenState extends State<PartScreen> {
             body: Consumer<BookmarkProvider>(
               builder: (context, provider, child) {
                 return PageBody(
-                  // controller: controller,
-                  // isPined: isPined,
                   pages: widget.pages,
-                  // connectivityResult: widget.connectivityResult,
                   firstPageNum: widget.firstPageNum,
-                  // function: (double progress) {
-                  //   setState(() {
-                  //     this.progress = progress;
-                  //   });
-                  // },
                   isPartScreen: true,
                   bookmark: getBookMark(provider.bookmarks, widget.partNo),
                 );
@@ -90,6 +72,4 @@ class _PartScreenState extends State<PartScreen> {
       ),
     );
   }
-
-// int getPreviousIndex() => pageNumber - 1;
 }

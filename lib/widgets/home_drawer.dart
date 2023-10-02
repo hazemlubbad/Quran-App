@@ -181,7 +181,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
   void search(BuildContext context) {
     for (var page in widget.pages) {
       for (var sura in page.suras) {
-        sura.sura.forEach((aya) {
+        for (var aya in sura.sura) {
           if (aya.ayaTextEmlaey
                   ?.toLowerCase()
                   .contains(controller.text.toLowerCase()) ??
@@ -190,7 +190,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
               ayas.add(aya);
             });
           }
-        });
+        }
       }
     }
     if (ayas.isEmpty) {

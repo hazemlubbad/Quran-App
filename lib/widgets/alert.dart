@@ -12,7 +12,8 @@ void showSnackBar(BuildContext context,
       duration: const Duration(seconds: 2),
       dismissDirection: DismissDirection.horizontal,
       shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(18))),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(18)),
+      ),
     ),
   );
 }
