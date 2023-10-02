@@ -29,12 +29,6 @@ class _PreBuildPagesState extends State<PreBuildPages> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         body: GestureDetector(
-          // onScaleUpdate: (d) {
-          //   setState(() {
-          //     scale = d.scale;
-          //   });
-          // print(d.scale);
-          // },
           child: PageView(
             physics: isPined ? const NeverScrollableScrollPhysics() : null,
             onPageChanged: (index) async {
@@ -48,18 +42,8 @@ class _PreBuildPagesState extends State<PreBuildPages> {
               if (qPages.length < pageNumber + 1) {
                 QPage page = QPage();
                 page.getByPage(pageNumber + 1);
-                // qPages.add(QPageScreen(
-                //   pageNumber: pageNumber + 1,
-                //   page: page.suras,
-                //   // scale: scale,
-                // ));
               }
               print(qPages.length);
-
-              // await widget.pages[1].getByPage(pageNumber);
-              // await widget.pages[2].getByPage(pageNumber + 1);
-
-              // getData();
             },
             children: qPages,
           ),

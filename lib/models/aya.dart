@@ -66,6 +66,7 @@ class Aya {
     data['aya_no'] = ayaNo;
     data['aya_text'] = ayaText;
     data['aya_text_emlaey'] = ayaTextEmlaey;
+
     return data;
   }
 }

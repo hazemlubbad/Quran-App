@@ -23,7 +23,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            appBarTheme: const AppBarTheme(foregroundColor: Colors.black)),
+            appBarTheme: const AppBarTheme(
+          foregroundColor: Colors.black,
+        )),
         home: const Directionality(
           textDirection: TextDirection.rtl,
           child: LoadingScreen(),

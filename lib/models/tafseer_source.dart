@@ -5,8 +5,13 @@ class TafseerSource {
   String? author;
   String? bookName;
 
-  TafseerSource(
-      {this.id, this.name, this.language, this.author, this.bookName});
+  TafseerSource({
+    this.id,
+    this.name,
+    this.language,
+    this.author,
+    this.bookName,
+  });
 
   TafseerSource.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -23,6 +28,7 @@ class TafseerSource {
     data['language'] = language;
     data['author'] = author;
     data['book_name'] = bookName;
+
     return data;
   }
 }

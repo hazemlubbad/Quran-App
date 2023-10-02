@@ -27,6 +27,7 @@ class Tafseer {
     data['ayah_url'] = ayahUrl;
     data['ayah_number'] = ayahNumber;
     data['text'] = text;
+
     return data;
   }
 }
