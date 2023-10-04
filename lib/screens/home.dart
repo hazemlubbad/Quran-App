@@ -54,7 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (context, index) {
                 return QPageScreen(
                   pageNumber: pageNumber,
-                  page: widget.page.suras, index: index,
+                  page: widget.page.suras,
+                  index: index,
                 );
               },
             ),

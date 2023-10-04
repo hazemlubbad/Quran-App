@@ -132,27 +132,12 @@ class _HomeDrawerState extends State<HomeDrawer> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
-                      // int firstPageNum = Juz.quranJuzList[index].startPage;
-                      // int lastPageNum = Juz.quranJuzList[index].endPage;
                       String part = getJozzName(Juz.quranJuzList[index].juzNo);
                       return ListTile(
                         onTap: () {
                           Navigator.pop(context);
                           Provider.of<PageProvider>(context, listen: false)
                               .animateTo(Juz.quranJuzList[index].startPage - 1);
-
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (_) => PartScreen(
-                          //               connectivityResult:
-                          //                   ConnectivityResult.wifi,
-                          //               pages: pages.sublist(
-                          //                   firstPageNum - 1, lastPageNum),
-                          //               partName: part,
-                          //               firstPageNum: firstPageNum,
-                          //               partNo: Juz.quranJuzList[index].juzNo,
-                          //             )));
                         },
                         leading: Text(
                           "${Juz.quranJuzList[index].juzNo}",
